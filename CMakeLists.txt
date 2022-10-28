@@ -17,6 +17,6 @@ set(RESOURCES
 set (FORMS
 )
 
-add_executable(foo WIN32 MACOSX_BUNDLE
+add_executable(foo
 	${SOURCES} ${HEADERS} ${RESOURCES}
 	${FORMS})
