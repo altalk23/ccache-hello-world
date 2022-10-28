@@ -16,9 +16,11 @@ jobs:
       uses: hendrikmuhs/ccache-action@v1.2.3
       with:
         key: v2-${{ runner.os }}-${{ github.ref }}
-    - name: version
+    - name: install ccache and version
       shell: bash
       run: |
+        choco install ccache
+        choco upgrade ccache
         ccache --version
     - name: Configure and Build
       shell: bash
