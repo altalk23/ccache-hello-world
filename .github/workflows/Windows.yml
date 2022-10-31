@@ -18,7 +18,11 @@ jobs:
         echo "=============="
         ccache --version
         echo "=============="
+        choco install ninja
+        echo "=============="
         ninja --version
+        echo "=============="
+        cmake --version
     - name: Ccache
       uses: hendrikmuhs/ccache-action@v1.2.3
       with:
