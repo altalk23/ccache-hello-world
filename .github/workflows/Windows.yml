@@ -17,6 +17,8 @@ jobs:
         choco install ccache
         echo "=============="
         ccache --version
+        echo "=============="
+        ninja --version
     - name: Ccache
       uses: hendrikmuhs/ccache-action@v1.2.3
       with:
