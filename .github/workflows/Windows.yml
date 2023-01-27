@@ -25,10 +25,14 @@ jobs:
         choco install ninja
         echo "=============="
         ninja --version
-    - name: Configure and Build
+    - name: Configure CMake
       shell: bash
       run: |
         mkdir build
         cd build
         cmake -DCMAKE_BUILD_TYPE=Release -GNinja -DCMAKE_C_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_COMPILER_LAUNCHER=ccache ..
-        cmake --build .
+        
+    - name: Build
+      shell: bash
+      run: |
+        cmake --build build
